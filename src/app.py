@@ -18,7 +18,7 @@ def main():
     user = st.query_params.get("user")
     if user not in valid_users:
         st.error("Please provide a valid user")
-        return "error"
+        return "done"
     user_name = valid_users[user]
     st.header(f"Welcome, {user_name}!")
     datadir = os.path.join(SCRIPT_DIR, "data", user_name)
