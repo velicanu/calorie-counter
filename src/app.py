@@ -1,7 +1,9 @@
-import streamlit as st
-import os
-from adders import item_adder, nutrition_adder, dictionary_adder, init_sql
 import json
+import os
+
+import streamlit as st
+
+from adders import dictionary_adder, init_sql, item_adder, nutrition_adder
 
 SCRIPT_DIR = os.path.dirname(__file__)
 valid_users = json.load(open(os.path.join(SCRIPT_DIR, "users.json")))

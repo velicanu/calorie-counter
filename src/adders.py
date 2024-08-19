@@ -1,9 +1,10 @@
-import streamlit as st
 import os
-from datetime import date, timedelta
-import pandas as pd
 import sqlite3
+from datetime import date, timedelta
+
+import pandas as pd
 import plotly.express as px
+import streamlit as st
 
 today = date.today()
 SCRIPT_DIR = os.path.dirname(__file__)
