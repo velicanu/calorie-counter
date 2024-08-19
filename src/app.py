@@ -6,7 +6,12 @@ import streamlit as st
 from adders import dictionary_adder, init_sql, item_adder, nutrition_adder
 
 SCRIPT_DIR = os.path.dirname(__file__)
-valid_users = json.load(open(os.path.join(SCRIPT_DIR, "users.json")))
+
+valid_users = (
+    json.load(open(os.path.join(SCRIPT_DIR, "users.json")))
+    if os.path.exists(os.path.join(SCRIPT_DIR, "users.json"))
+    else {}
+)
 
 
 def main():
